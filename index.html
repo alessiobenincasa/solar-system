@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Solar System | Three.js Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="solar-loader"></div>
+            <h2>Loading Solar System...</h2>
+            <p>Preparing your cosmic journey</p>
+        </div>
+    </div>
+
+    <div id="info-panel" class="info-panel">
+        <h1>Interactive Solar System</h1>
+        <p>Navigate through our solar system using mouse controls</p>
+        <div class="controls">
+            <p><strong>Controls:</strong></p>
+            <ul>
+                <li>Left Click + Drag: Rotate view</li>
+                <li>Right Click + Drag: Pan view</li>
+                <li>Scroll: Zoom in/out</li>
+                <li>Space: Toggle planet labels</li>
+            </ul>
+        </div>
+        <div class="planet-info" id="planet-info">
+            <h3 id="planet-name">Click on a planet to learn more</h3>
+            <p id="planet-description"></p>
+        </div>
+    </div>
+
+    <div id="scene-container"></div>
+
+    <div class="ui-controls">
+        <button id="toggle-labels" class="control-btn">Toggle Labels</button>
+        <button id="toggle-orbits" class="control-btn">Toggle Orbits</button>
+        <button id="speed-control" class="control-btn" data-speed="1">Speed: 1x</button>
+        <button id="reset-camera" class="control-btn">Reset View</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

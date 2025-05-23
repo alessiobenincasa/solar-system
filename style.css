@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
+    color: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#scene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.solar-loader {
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #ffd700;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-screen h2 {
+    color: #ffd700;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.loading-screen p {
+    color: #cccccc;
+    font-size: 1em;
+}
+
+.info-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.info-panel h1 {
+    color: #ffd700;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.info-panel p {
+    color: #cccccc;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.controls ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.controls li {
+    color: #aaaaaa;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.planet-info {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.planet-info h3 {
+    color: #ffd700;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.planet-info p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.ui-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.control-btn {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.control-btn:hover {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #ffd700;
+    color: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.control-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .info-panel {
+        max-width: 250px;
+        padding: 15px;
+    }
+    
+    .info-panel h1 {
+        font-size: 1.2em;
+    }
+    
+    .controls li {
+        font-size: 0.8em;
+    }
+    
+    .ui-controls {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .control-btn {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-panel {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: none;
+        margin: 10px;
+    }
+    
+    .ui-controls {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.7);
+}
+
+.glow {
+    text-shadow: 0 0 20px currentColor;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+} 

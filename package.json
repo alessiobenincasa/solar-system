@@ -1,0 +1,43 @@
+{
+  "name": "interactive-3d-solar-system",
+  "version": "1.0.0",
+  "description": "An impressive Three.js-powered interactive solar system with realistic orbital mechanics, particle effects, and educational content.",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "serve": "python3 -m http.server 8080",
+    "dev": "live-server --port=8080",
+    "open": "open index.html"
+  },
+  "keywords": [
+    "threejs",
+    "3d",
+    "solar-system",
+    "javascript",
+    "webgl",
+    "astronomy",
+    "interactive",
+    "education",
+    "portfolio",
+    "visualization"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/interactive-3d-solar-system.git"
+  },
+  "homepage": "https://yourusername.github.io/interactive-3d-solar-system/",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 
