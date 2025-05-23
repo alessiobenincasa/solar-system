@@ -1,3 +1,4 @@
+<img width="1696" alt="Capture d’écran 2025-05-23 à 17 57 15" src="https://github.com/user-attachments/assets/0c2a8df7-cc59-4be5-982c-2a64c3a9ebbb" />
 Interactive 3D Solar System
 
 An impressive Three.js-powered interactive solar system that brings the cosmos to your browser. This project demonstrates advanced 3D graphics programming, orbital mechanics simulation, and interactive web design.
